@@ -1,0 +1,21 @@
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("green")
+Richboy = turtle.Turtle()
+Richboy.shape("turtle")
+Richboy.pensize(3)
+Richboy.color("blue")
+Richboy.stamp
+for i in range(12):
+  Richboy.up()
+  Richboy.forward(80)
+  Richboy.shape("classic")
+  Richboy.down()
+  Richboy.forward(10)
+  Richboy.up()
+  Richboy.forward(10)
+  Richboy.shape("turtle")
+  Richboy.stamp()
+  Richboy.forward(-100)
+  Richboy.left(30)
+wn.exitonclick()
