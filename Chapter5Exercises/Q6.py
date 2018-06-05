@@ -1,5 +1,5 @@
 def sum_to(n):
   sum=(n * (n + 1)) / 2
-  print(sum)
+  return sum
 
-sum_to(150)
+print(sum_to(150))
