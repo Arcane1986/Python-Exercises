@@ -1,4 +1,3 @@
-# Primes are numbers only divisible by 1 and itself
 # https://www.codewars.com/kata/gap-in-primes/train/python
 
 def isprime(x):
@@ -11,23 +10,14 @@ def isprime(x):
   return x
 
 
-def prime_list(start,finish):
+def gap(gap,start,finish):
   prime_list=[]
   for x in range(start,finish+1):
     if isprime(x)!=None:
       prime_list.append(x)
-  return prime_list
-
-def prime_gap(gap,start,finish):
-  x=0
-  a=prime_list(start,finish)
-  while True:
-    if (x + 1) == len(a):
-      return None
-    elif a[x+1] - a[x] == gap:
-      return [a[x],a[x+1]]
-    x+=1
-
-print(prime_gap(4,1,100))
-    
-
+      if prime_list.index(x)>0:
+        y = prime_list[prime_list.index(x)-1]
+        difference = x - y
+        if difference == gap:
+          return [y,x]
+  return None
